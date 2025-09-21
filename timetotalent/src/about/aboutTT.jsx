@@ -16,32 +16,33 @@ const colors = {
   cream: "#FFE8D6",
   sageLight: "#B7B7A4",
   sage: "#A5A58D",
-  olive: "#6B705C", 
+  olive: "#6B705C",
 };
 
 const Page = styled(Box)(() => ({
   minHeight: "100vh",
+  maxWidth: 1200,
   background: `radial-gradient(1200px 600px at 20% -10%, ${colors.sand} 0%, ${colors.cream} 50%)`,
   fontFamily:
     "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
-  lineHeight: 1.6,
-  borderRadius: 5,
+  lineHeight: 1.5,
+  borderRadius: 28,
 }));
 
 const HeroSection = styled(Box)(({ theme }) => ({
   minHeight: "50vh",
   display: "flex",
   alignItems: "center",
-  margin: theme.spacing(3),
+  margin: theme.spacing(0.5),
+  margin: `${theme.spacing(1)} auto  ${theme.spacing(3)}`,
   padding: theme.spacing(3),
   background: `linear-gradient(180deg, ${colors.cream} 0%, ${colors.sand} 100%)`,
-  borderRadius: 5,
+  borderRadius: 28,
   boxShadow: "0 12px 28px rgba(0,0,0,.08)",
   [theme.breakpoints.down("md")]: {
-    minHeight: "auto",
     padding: theme.spacing(2.5),
     borderRadius: 22,
-    margin: theme.spacing(2),
+    margin: theme.spacing(0),
   },
 }));
 
@@ -49,7 +50,7 @@ const LogoBox = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: theme.spacing(2),
+  padding: theme.spacing(0.5),
 }));
 
 const StatisticsSection = styled(Box)(({ theme }) => ({
@@ -240,61 +241,65 @@ const AboutPage = () => {
                 },
               }}
             >
-{[
-  {
-    value: "82%",
-    title: (
-      <>
-        of <strong>formerly incarcerated people</strong> are re-arrested
-      </>
-    ),
-    desc: "within ten years of release",
-  },
-  {
-    value: "",
-    title: (
-      <>
-        <strong>FIPs</strong> face huge obstacles to find <strong>stable employment</strong>
-      </>
-    ),
-    desc: "limited opportunities increase recidivism risk",
-  },
-  {
-    value: "89%",
-    title: (
-      <>
-        of <strong>FIPs</strong> who are re-arrested are <strong>unemployed</strong>
-      </>
-    ),
-    desc: "",
-  },
-  {
-    value: "2×",
-    title: (
-      <>
-        Those who are <strong>unemployed</strong> are more likely
-      </>
-    ),
-    desc: "to be re-arrested than employed peers",
-  },
-  {
-    value: "8/10",
-    title: (
-      <>
-        <strong>Youth offenders</strong> are arrested again
-      </>
-    ),
-    desc: "within five years of release",
-  },
-  {
-    value: "55%",
-    title: (
-      <>
-        of <strong>employed FIPs</strong> avoid re-arrest
-      </>
-    ),
-    desc: "compared to only 30% unemployed",
-  },,
+              {[
+                {
+                  value: "82%",
+                  title: (
+                    <>
+                      of <strong>formerly incarcerated people</strong> are
+                      re-arrested
+                    </>
+                  ),
+                  desc: "within ten years of release",
+                },
+                {
+                  value: "",
+                  title: (
+                    <>
+                      <strong>FIPs</strong> face huge obstacles to find{" "}
+                      <strong>stable employment</strong>
+                    </>
+                  ),
+                  desc: "limited opportunities increase recidivism risk",
+                },
+                {
+                  value: "89%",
+                  title: (
+                    <>
+                      of <strong>FIPs</strong> who are re-arrested are{" "}
+                      <strong>unemployed</strong>
+                    </>
+                  ),
+                  desc: "",
+                },
+                {
+                  value: "2×",
+                  title: (
+                    <>
+                      Those who are <strong>unemployed</strong> are more likely
+                    </>
+                  ),
+                  desc: "to be re-arrested than employed peers",
+                },
+                {
+                  value: "8/10",
+                  title: (
+                    <>
+                      <strong>Youth offenders</strong> are arrested again
+                    </>
+                  ),
+                  desc: "within five years of release",
+                },
+                {
+                  value: "55%",
+                  title: (
+                    <>
+                      of <strong>employed FIPs</strong> avoid re-arrest
+                    </>
+                  ),
+                  desc: "compared to only 30% unemployed",
+                },
+                ,
                 {
                   value: "8/10",
                   title: (
@@ -308,7 +313,7 @@ const AboutPage = () => {
                 <Box
                   key={idx}
                   sx={{
-                    flex: "0 0 280px", 
+                    flex: "0 0 280px",
                     scrollSnapAlign: "start",
                   }}
                 >

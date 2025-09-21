@@ -153,9 +153,9 @@ const UserInfoForm = () => {
   return (
     <Box
       sx={{
-        maxWidth: 800,
+        minWidth: 1050,
         mx: "auto",
-        mt: 5,
+        mt: .5,
         p: 3,
         border: "1px solid #ccc",
         borderRadius: 5,
