@@ -1,6 +1,6 @@
 # SteelHacks
 
-2025 Steel Hacks build
+2025 Steel Hacks build!
 
 Make sure to have Node downloaded. 
 cd into the correct directory then
